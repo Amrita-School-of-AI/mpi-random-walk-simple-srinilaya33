@@ -79,7 +79,7 @@ void walker_process()
             break;
         }
     }
-    std::cout << "Rank " << world_rank << ": Walker finished in " << steps << "steps" << std::endl;
+    std::cout << "Rank " << world_rank << ": Walker finished in " << steps << " steps" << std::endl;
     int signal_completion = world_rank;
     MPI_Send(&signal_completion, 1, MPI_INT, 0, 0, MPI_COMM_WORLD);      
 }
